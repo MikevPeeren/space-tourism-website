@@ -1,7 +1,8 @@
 import Head from "next/head";
-// import Image from "next/image";
 
-export default function Home() {
+import Header from "../components/Header";
+
+const Home = () => {
   return (
     <div className="background">
       <Head>
@@ -9,8 +10,12 @@ export default function Home() {
         <meta name="description" content="Created by Mike van Peeren" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main></main>
+      <main>
+        <Header />
+      </main>
       <footer></footer>
     </div>
   );
-}
+};
+
+export default Home;
