@@ -7,8 +7,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
 
   height: 100vh;
 }
@@ -50,4 +49,25 @@ ul > li {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 2.7px;
+}
+
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+
+  @apply text-blue;
+}
+
+h2 {
+  font-size: 80px;
+  line-height: 100px;
+  font-family: "Bellefair", serif;
+}
+
+h3 {
+  font-size: 15px;
+  line-height: 25px;
+  @apply text-blue;
 }
