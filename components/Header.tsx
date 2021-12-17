@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import LOGO from "../public/shared/logo.svg";
 import HAMBURGER from "../public/shared/icon-hamburger.svg";
+import CLOSE from "../public/shared/icon-close.svg";
 
 import styles from "./Header.module.scss";
 
@@ -28,7 +29,10 @@ const Header = () => {
         <aside
           className={`${styles.hamburgerMenu} fixed w-3/5 h-full right-0 z-2 bg-pink-300`}
         >
-          <ul className="mt-40 ml-8 w-full">
+          <button className="flex flex-row ml-auto justify-end p-4">
+            <Image src={CLOSE} alt="" width={20} height={21} />
+          </button>
+          <ul className="mt-20 ml-8 w-full">
             <li className="my-10 uppercase">
               <span className="pr-2 font-bold">00</span> Home
             </li>
