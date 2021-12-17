@@ -16,7 +16,7 @@ const Header = () => {
 
   // Initializing menu
   const navBarClassNames = classNames(
-    `${styles.hamburgerMenu} fixed w-3/5 h-full right-0 z-2 ease-in-out duration-1000 transform`,
+    `${styles.hamburgerMenu} fixed w-3/5 min-h-screen right-0 z-2 text-left ease-in-out duration-1000 transform`,
     {
       "translate-x-0": isMenuOpen,
       "translate-x-full": !isMenuOpen,
