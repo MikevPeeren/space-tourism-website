@@ -16,7 +16,7 @@ const Header = () => {
 
   // Initializing menu
   const navBarClassNames = classNames(
-    `${styles.hamburgerMenu} fixed w-3/5 min-h-screen right-0 z-2 text-left ease-in-out duration-1000 transform`,
+    `${styles.hamburgerMenu} fixed top-0 w-3/5 min-h-screen right-0 z-2 text-left ease-in-out duration-1000 transform`,
     {
       "translate-x-0": isMenuOpen,
       "translate-x-full": !isMenuOpen,
@@ -24,8 +24,8 @@ const Header = () => {
   );
 
   return (
-    <header className="relative">
-      <div className="fixed w-full z-0">
+    <header>
+      <div className="w-full z-0">
         <div className="flex flex-row items-center justify-between p-4">
           <Image src={LOGO} alt="" width={40} height={40} />
           <button onClick={() => setIsMenuOpen(true)}>
