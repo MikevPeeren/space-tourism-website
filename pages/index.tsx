@@ -25,7 +25,7 @@ const Home = () => {
             world experience!
           </h3>
 
-          <button className="bg-white mt-40 border-1 rounded-full w-[150px] h-[150px] font-bellefair text-xl uppercase tracking-wider leading-6">
+          <button className="bg-white m-auto mb-24 border-1 rounded-full w-[150px] h-[150px] font-bellefair text-xl uppercase tracking-wider leading-6 hover:ring-[40px] hover:ring-gray hover:ring-opacity-60">
             Explore
           </button>
         </div>
