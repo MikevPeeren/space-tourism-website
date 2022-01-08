@@ -20,6 +20,8 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
             rel="stylesheet"
           ></link>
+          <meta name="description" content="Created by Mike van Peeren" />
+          <link rel="icon" href="/favicon.svg" />
         </Head>
         <body>
           <Main />

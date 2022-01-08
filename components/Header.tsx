@@ -96,7 +96,7 @@ const Header = () => {
                     : ""
                 }`}
               >
-                00 <span className="pl-2"> Technology</span>
+                03 <span className="pl-2"> Technology</span>
               </a>
             </Link>
           </li>

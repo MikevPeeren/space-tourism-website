@@ -10,6 +10,7 @@ module.exports = {
         blue: "#D0D6F9",
         white: "#FFFFFF",
         gray: "#979797",
+        "dark-gray": "#383B4B",
       },
       fontFamily: {
         bellefair: ["Bellefair", "serif"],

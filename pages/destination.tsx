@@ -6,9 +6,7 @@ const Destination = () => {
   return (
     <div className="background">
       <Head>
-        <title>Space Tourism</title>
-        <meta name="description" content="Created by Mike van Peeren" />
-        <link rel="icon" href="/favicon.svg" />
+        <title>Space Destination</title>
       </Head>
       <main className="flex flex-col min-h-screen text-center">
         <div className="h-20">
