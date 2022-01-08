@@ -30,7 +30,12 @@ const Crew = () => {
               />
             </div>
           </div>
-          <div className="flex flex-row justify-between items-center"></div>
+          <div className="flex flex-row justify-between items-center mt-8">
+            <button className="rounded-full bg-white w-3 h-3 mx-2"></button>
+            <button className="rounded-full bg-white w-3 h-3 mx-2 bg-opacity-20"></button>
+            <button className="rounded-full bg-white w-3 h-3 mx-2 bg-opacity-20"></button>
+            <button className="rounded-full bg-white w-3 h-3 mx-2 bg-opacity-20"></button>
+          </div>
           <div className="flex flex-col justify-between items-center mt-8">
             <h2 className="uppercase text-base text-white opacity-50">
               Commander
