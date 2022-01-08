@@ -18,7 +18,7 @@ const Crew = () => {
         </div>
 
         <div className="flex flex-col justify-start items-center min-h-screen text-center mt-10 mx-1">
-          <h1 className="uppercase my-6 text-white">
+          <h1 className="uppercase my-6 text-base text-white">
             <span className="opacity-25 pr-4">02</span> Meet your crew
           </h1>
           <div className="flex flex-col justify-between items-center mt-8 border-b border-dark-gray w-5/6">
@@ -29,6 +29,18 @@ const Crew = () => {
                 layout="responsive"
               />
             </div>
+          </div>
+          <div className="flex flex-row justify-between items-center"></div>
+          <div className="flex flex-col justify-between items-center mt-8">
+            <h2 className="uppercase text-base text-white opacity-50">
+              Commander
+            </h2>
+            <h3 className="uppercase text-2xl text-blue">Douglas Hurley</h3>
+            <h4 className="my-6 mx-4 text-base text-blue">
+              Douglas Gerald Hurley is an American engineer, former Marine Corps
+              pilot and former NASA astronaut. He launched into space for the
+              third time as commander of Crew Dragon Demo-2.
+            </h4>
           </div>
         </div>
       </main>
