@@ -18,7 +18,7 @@ const Home = () => {
         <div className="flex flex-col justify-start items-center min-h-screen text-center mt-10 mx-1">
           <h1 className="uppercase my-6">So, you want to travel to</h1>
           <h2 className="uppercase text-white">Space</h2>
-          <h3 className="my-6">
+          <h3 className="my-6 mx-4">
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this

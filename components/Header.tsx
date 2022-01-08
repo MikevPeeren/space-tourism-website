@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 // External
 import classNames from "classnames";
@@ -34,7 +35,7 @@ const Header = () => {
         </div>
       </div>
 
-      <aside className={navBarClassNames}>
+      <nav className={navBarClassNames}>
         <div className="flex flex-row items-center justify-between p-4">
           <button
             className="flex flex-row ml-auto items-center justify-center w-10 h-10"
@@ -47,19 +48,35 @@ const Header = () => {
         </div>
         <ul className="mt-20 ml-8 w-full">
           <li className="my-10 uppercase">
-            <span className="pr-2 font-bold">00</span> Home
+            <Link href="/" passHref>
+              <a className="font-bold">
+                00 <span className="pl-2">Home</span>
+              </a>
+            </Link>
           </li>
           <li className="my-10 uppercase">
-            <span className="pr-2.5 font-bold">01</span> Destination
+            <Link href="/destination" passHref>
+              <a className="font-bold">
+                00 <span className="pl-2"> Destination</span>
+              </a>
+            </Link>
           </li>
           <li className="my-10 uppercase">
-            <span className="pr-2 font-bold">02</span> Crew
+            <Link href="/crew" passHref>
+              <a className="font-bold">
+                00 <span className="pl-2"> Crew</span>
+              </a>
+            </Link>
           </li>
           <li className="my-10 uppercase">
-            <span className="pr-2 font-bold">03</span> Technology
+            <Link href="/technology" passHref>
+              <a className="font-bold">
+                00 <span className="pl-2"> Technology</span>
+              </a>
+            </Link>
           </li>
         </ul>
-      </aside>
+      </nav>
     </header>
   );
 };
