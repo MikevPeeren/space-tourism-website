@@ -29,7 +29,7 @@ const Home = () => {
             world experience!
           </h3>
 
-          <button className="bg-white m-auto mb-24 rounded-full w-[150px] h-[150px] font-bellefair text-xl text-black uppercase tracking-wider leading-6 hover:ring-[40px] hover:ring-gray hover:ring-opacity-60">
+          <button className="bg-white m-auto mb-24 rounded-full w-[150px] h-[150px] font-bellefair text-xl text-black uppercase tracking-wider leading-6 hover:ring-[40px] hover:ring-gray hover:ring-opacity-60 transition ease-in-out duration-500">
             Explore
           </button>
         </div>
