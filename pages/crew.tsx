@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-import clsx from "clsx";
+import classNames from "classnames";
 
 import Header from "../components/Header";
 
@@ -54,8 +54,9 @@ const Crew = () => {
           <div className="flex flex-row justify-between items-center mt-8">
             <button
               id="1"
-              className={clsx({
-                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer": true,
+              className={classNames({
+                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
+                  true,
                 "bg-opacity-20": activeButton != 1,
               })}
               onClick={(event) => {
@@ -64,8 +65,9 @@ const Crew = () => {
             ></button>
             <button
               id="2"
-              className={clsx({
-                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer": true,
+              className={classNames({
+                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
+                  true,
                 "bg-opacity-20": activeButton != 2,
               })}
               onClick={(event) => {
@@ -74,8 +76,9 @@ const Crew = () => {
             ></button>
             <button
               id="3"
-              className={clsx({
-                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer": true,
+              className={classNames({
+                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
+                  true,
                 "bg-opacity-20": activeButton != 3,
               })}
               onClick={(event) => {
@@ -84,8 +87,9 @@ const Crew = () => {
             ></button>
             <button
               id="4"
-              className={clsx({
-                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer": true,
+              className={classNames({
+                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
+                  true,
                 "bg-opacity-20": activeButton != 4,
               })}
               onClick={(event) => {
@@ -95,13 +99,36 @@ const Crew = () => {
           </div>
           <div className="flex flex-col justify-between items-center mt-8">
             <h2 className="uppercase text-base text-white opacity-50">
-              Commander
+              {activeButton == 1
+                ? "Commander"
+                : activeButton == 2
+                ? "Mission Specialist"
+                : activeButton == 3
+                ? "Pilot"
+                : "Flight Engineer"}
             </h2>
-            <h3 className="uppercase text-2xl text-blue">Douglas Hurley</h3>
+            <h3 className="uppercase text-2xl text-blue">
+              {activeButton == 1
+                ? "Douglas Hurley"
+                : activeButton == 2
+                ? "MARK SHUTTLEWORTH"
+                : activeButton == 3
+                ? "Victor Glover"
+                : "Anousheh Ansari"}
+            </h3>
             <h4 className="my-6 mx-4 text-base text-blue font-normal not-italic">
-              Douglas Gerald Hurley is an American engineer, former Marine Corps
+              {activeButton == 1
+                ? `Douglas Gerald Hurley is an American engineer, former Marine Corps
               pilot and former NASA astronaut. He launched into space for the
-              third time as commander of Crew Dragon Demo-2.
+              third time as commander of Crew Dragon Demo-2.`
+                : activeButton == 2
+                ? `Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.`
+                : activeButton == 3
+                ? `Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.`
+                : `Anousheh Ansari is an Iranian American engineer and co-founder of
+              Prodea Systems. Ansari was the fourth self-funded space tourist,
+              the first self-funded woman to fly to the ISS, and the first
+              Iranian in space.`}
             </h4>
           </div>
         </div>
