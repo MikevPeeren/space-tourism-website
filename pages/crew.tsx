@@ -41,7 +41,7 @@ const Crew = () => {
               Commander
             </h2>
             <h3 className="uppercase text-2xl text-blue">Douglas Hurley</h3>
-            <h4 className="my-6 mx-4 text-base text-blue">
+            <h4 className="my-6 mx-4 text-base text-blue font-normal not-italic">
               Douglas Gerald Hurley is an American engineer, former Marine Corps
               pilot and former NASA astronaut. He launched into space for the
               third time as commander of Crew Dragon Demo-2.
