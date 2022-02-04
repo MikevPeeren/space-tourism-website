@@ -5,19 +5,15 @@ import Image from "next/image";
 
 import classNames from "classnames";
 
-import Header from "../components/Header";
+import Header from "@/components/Header";
 
-import DOUGLAS from "../public/crew/image-douglas-hurley.webp";
-import MARK from "../public/crew/image-mark-shuttleworth.webp";
-import VICTOR from "../public/crew/image-victor-glover.webp";
-import ANOUSHEH from "../public/crew/image-anousheh-ansari.webp";
+import DOUGLAS from "/public/crew/image-douglas-hurley.webp";
+import MARK from "/public/crew/image-mark-shuttleworth.webp";
+import VICTOR from "/public/crew/image-victor-glover.webp";
+import ANOUSHEH from "/public/crew/image-anousheh-ansari.webp";
 
 const Crew = () => {
   const [activeButton, setActiveButton] = useState(1);
-
-  const handleCrewChange = (event) => {
-    setActiveButton(event.target.id);
-  };
 
   return (
     <div className="background--crew">
@@ -35,20 +31,38 @@ const Crew = () => {
           </h1>
           <div className="flex flex-col justify-between items-center mt-8 border-b border-dark-gray w-5/6">
             <div className="w-2/4">
-              <Image
-                src={
-                  activeButton == 1
-                    ? DOUGLAS
-                    : activeButton == 2
-                    ? MARK
-                    : activeButton == 3
-                    ? VICTOR
-                    : ANOUSHEH
-                }
-                alt="Picture of the author"
-                layout="responsive"
-                priority
-              />
+              {activeButton === 1 && (
+                <Image
+                  src={DOUGLAS}
+                  alt="Picture of Douglas Hurley"
+                  layout="responsive"
+                  priority
+                />
+              )}
+              {activeButton === 2 && (
+                <Image
+                  src={MARK}
+                  alt="Picture of Mark Shuttleworth"
+                  layout="responsive"
+                  priority
+                />
+              )}
+              {activeButton === 3 && (
+                <Image
+                  src={VICTOR}
+                  alt="Picture of Victor Glover"
+                  layout="responsive"
+                  priority
+                />
+              )}
+              {activeButton === 4 && (
+                <Image
+                  src={ANOUSHEH}
+                  alt="Picture of Anousheh Ansari"
+                  layout="responsive"
+                  priority
+                />
+              )}
             </div>
           </div>
           <div className="flex flex-row justify-between items-center mt-8">
@@ -59,9 +73,7 @@ const Crew = () => {
                   true,
                 "bg-opacity-20": activeButton != 1,
               })}
-              onClick={(event) => {
-                handleCrewChange(event);
-              }}
+              onClick={() => setActiveButton(1)}
             ></button>
             <button
               id="2"
@@ -70,9 +82,7 @@ const Crew = () => {
                   true,
                 "bg-opacity-20": activeButton != 2,
               })}
-              onClick={(event) => {
-                handleCrewChange(event);
-              }}
+              onClick={() => setActiveButton(2)}
             ></button>
             <button
               id="3"
@@ -81,9 +91,7 @@ const Crew = () => {
                   true,
                 "bg-opacity-20": activeButton != 3,
               })}
-              onClick={(event) => {
-                handleCrewChange(event);
-              }}
+              onClick={() => setActiveButton(3)}
             ></button>
             <button
               id="4"
@@ -92,9 +100,7 @@ const Crew = () => {
                   true,
                 "bg-opacity-20": activeButton != 4,
               })}
-              onClick={(event) => {
-                handleCrewChange(event);
-              }}
+              onClick={() => setActiveButton(4)}
             ></button>
           </div>
           <div className="flex flex-col justify-between items-center mt-8">
