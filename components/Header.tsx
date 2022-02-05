@@ -57,7 +57,7 @@ const Header = () => {
                   router.pathname === "/" ? "border-l-4 border-white pl-2" : ""
                 }`}
               >
-                00 <span className="pl-2">Home</span>
+                00 <span className="pl-2 font-normal">Home</span>
               </a>
             </Link>
           </li>
@@ -70,7 +70,7 @@ const Header = () => {
                     : ""
                 }`}
               >
-                01 <span className="pl-2"> Destination</span>
+                01 <span className="pl-2 font-normal"> Destination</span>
               </a>
             </Link>
           </li>
@@ -83,7 +83,7 @@ const Header = () => {
                     : ""
                 }`}
               >
-                02 <span className="pl-2"> Crew</span>
+                02 <span className="pl-2 font-normal"> Crew</span>
               </a>
             </Link>
           </li>
@@ -96,7 +96,7 @@ const Header = () => {
                     : ""
                 }`}
               >
-                03 <span className="pl-2"> Technology</span>
+                03 <span className="pl-2 font-normal"> Technology</span>
               </a>
             </Link>
           </li>
