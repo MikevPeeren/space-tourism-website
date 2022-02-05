@@ -24,8 +24,8 @@ const Crew = () => {
           <Header />
         </div>
 
-        <div className="flex flex-col justify-start items-center text-center mt-10 mx-1 ">
-          <h1 className="uppercase my-6 text-base text-white">
+        <div className="flex flex-col justify-start items-center text-center mt-4 mx-1 ">
+          <h1 className="uppercase my-6 text-base text-white tracking-widest">
             <span className="opacity-25 pr-4">02</span> Meet your crew
           </h1>
           <div className="flex flex-col justify-between items-center mt-8 border-b border-dark-gray w-5/6">
@@ -71,7 +71,7 @@ const Crew = () => {
           />
 
           <div className="flex flex-col justify-between items-center mt-8">
-            <h2 className="uppercase text-base text-white opacity-50">
+            <h2 className="uppercase text-base text-white opacity-50 font-bellefair">
               {activeButton == 1
                 ? "Commander"
                 : activeButton == 2
@@ -80,7 +80,7 @@ const Crew = () => {
                 ? "Pilot"
                 : "Flight Engineer"}
             </h2>
-            <h3 className="uppercase text-2xl text-blue">
+            <h3 className="uppercase text-2xl text-white font-bellefair">
               {activeButton == 1
                 ? "Douglas Hurley"
                 : activeButton == 2
@@ -89,7 +89,7 @@ const Crew = () => {
                 ? "Victor Glover"
                 : "Anousheh Ansari"}
             </h3>
-            <h4 className="my-6 mx-4 text-base text-blue font-normal not-italic">
+            <h4 className="my-6 mx-4 text-base text-blue font-barlow not-italic">
               {activeButton == 1
                 ? `Douglas Gerald Hurley is an American engineer, former Marine Corps
               pilot and former NASA astronaut. He launched into space for the
