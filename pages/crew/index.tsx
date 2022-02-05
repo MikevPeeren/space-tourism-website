@@ -3,9 +3,8 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-import classNames from "classnames";
-
 import Header from "@/components/Header";
+import ListSelector from "@/components/ListSelector";
 
 import DOUGLAS from "/public/crew/image-douglas-hurley.webp";
 import MARK from "/public/crew/image-mark-shuttleworth.webp";
@@ -25,7 +24,7 @@ const Crew = () => {
           <Header />
         </div>
 
-        <div className="flex flex-col justify-start items-center min-h-screen text-center mt-10 mx-1">
+        <div className="flex flex-col justify-start items-center min-h-screen text-center mt-10 mx-1 ">
           <h1 className="uppercase my-6 text-base text-white">
             <span className="opacity-25 pr-4">02</span> Meet your crew
           </h1>
@@ -65,44 +64,12 @@ const Crew = () => {
               )}
             </div>
           </div>
-          <div className="flex flex-row justify-between items-center mt-8">
-            <button
-              id="1"
-              className={classNames({
-                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
-                  true,
-                "bg-opacity-20": activeButton != 1,
-              })}
-              onClick={() => setActiveButton(1)}
-            ></button>
-            <button
-              id="2"
-              className={classNames({
-                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
-                  true,
-                "bg-opacity-20": activeButton != 2,
-              })}
-              onClick={() => setActiveButton(2)}
-            ></button>
-            <button
-              id="3"
-              className={classNames({
-                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
-                  true,
-                "bg-opacity-20": activeButton != 3,
-              })}
-              onClick={() => setActiveButton(3)}
-            ></button>
-            <button
-              id="4"
-              className={classNames({
-                "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
-                  true,
-                "bg-opacity-20": activeButton != 4,
-              })}
-              onClick={() => setActiveButton(4)}
-            ></button>
-          </div>
+
+          <ListSelector
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+          />
+
           <div className="flex flex-col justify-between items-center mt-8">
             <h2 className="uppercase text-base text-white opacity-50">
               {activeButton == 1
