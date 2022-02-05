@@ -61,6 +61,27 @@ a {
   }
 }
 
+.background--technology:before {
+  content: "";
+  background-image: url("/technology/background-technology-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.25;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  position: absolute;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    background-image: url("/technology/background-technology-tablet.jpg");
+  }
+  @media screen and (max-width: 767px) {
+    background-image: url("/technology/background-technology-mobile.jpg");
+  }
+}
+
 ul > li {
   color: white;
 

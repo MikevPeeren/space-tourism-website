@@ -71,7 +71,7 @@ const Crew = () => {
           />
 
           <div className="flex flex-col justify-between items-center mt-8">
-            <h2 className="uppercase text-base text-white opacity-50 font-bellefair">
+            <h2 className="uppercase text-base text-white opacity-50 font-bellefair mb-2">
               {activeButton == 1
                 ? "Commander"
                 : activeButton == 2
