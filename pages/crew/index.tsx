@@ -19,12 +19,12 @@ const Crew = () => {
       <Head>
         <title>Space Crew</title>
       </Head>
-      <main className="flex flex-col min-h-screen text-center">
+      <main className="flex flex-col min-h-screen text-center relative">
         <div className="h-20">
           <Header />
         </div>
 
-        <div className="flex flex-col justify-start items-center min-h-screen text-center mt-10 mx-1 ">
+        <div className="flex flex-col justify-start items-center text-center mt-10 mx-1 ">
           <h1 className="uppercase my-6 text-base text-white">
             <span className="opacity-25 pr-4">02</span> Meet your crew
           </h1>

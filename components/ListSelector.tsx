@@ -6,7 +6,7 @@ const ListSelector = ({ activeButton, setActiveButton }) => {
       <button
         id="1"
         className={classNames({
-          "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
+          "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-300":
             true,
           "bg-opacity-20": activeButton != 1,
         })}
@@ -15,7 +15,7 @@ const ListSelector = ({ activeButton, setActiveButton }) => {
       <button
         id="2"
         className={classNames({
-          "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
+          "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-300":
             true,
           "bg-opacity-20": activeButton != 2,
         })}
@@ -24,7 +24,7 @@ const ListSelector = ({ activeButton, setActiveButton }) => {
       <button
         id="3"
         className={classNames({
-          "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
+          "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-300":
             true,
           "bg-opacity-20": activeButton != 3,
         })}
@@ -33,7 +33,7 @@ const ListSelector = ({ activeButton, setActiveButton }) => {
       <button
         id="4"
         className={classNames({
-          "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-150":
+          "rounded-full bg-white w-3 h-3 mx-2 cursor-pointer transition ease-in-out delay-150 duration-300":
             true,
           "bg-opacity-20": activeButton != 4,
         })}
