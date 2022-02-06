@@ -26,7 +26,7 @@ const Crew = () => {
 
         <div className="flex flex-col justify-start items-center text-center mt-4 mx-1 ">
           <h1 className="uppercase my-6 text-base text-white tracking-widest">
-            <span className="opacity-25 pr-4">02</span> Meet your crew
+            <span className="opacity-25 pr-4 font-bold">02</span> Meet your crew
           </h1>
           <div className="flex flex-col justify-between items-center mt-8 border-b border-dark-gray w-5/6">
             <div className="w-3/4">

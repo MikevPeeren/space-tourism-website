@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -25,7 +25,8 @@ const Technology = () => {
 
         <div className="flex flex-col justify-start items-center text-center mt-4 mx-1 ">
           <h1 className="uppercase my-6 text-base text-white tracking-widest">
-            <span className="opacity-25 pr-4">03</span>Space Launch 101
+            <span className="opacity-25 pr-4 font-bold">03</span>Space Launch
+            101
           </h1>
         </div>
 
