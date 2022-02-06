@@ -19,7 +19,7 @@ const Destination = () => {
       <Head>
         <title>Space Destination</title>
       </Head>
-      <main className="flex flex-col min-h-screen text-center">
+      <main className="flex flex-col min-h-screen text-center relative">
         <div className="h-20">
           <Header />
         </div>
