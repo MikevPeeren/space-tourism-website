@@ -29,7 +29,7 @@ const Destination = () => {
             <span className="opacity-25 pr-4 font-bold">01</span> Pick your
             destination
           </h1>
-          <div className="flex flex-col justify-between items-center mt-8 w-5/6">
+          <div className="flex flex-col justify-between items-center mt-2 w-5/6">
             <div className="w-3/5">
               {activeButton === 0 && (
                 <Image
@@ -72,6 +72,42 @@ const Destination = () => {
             content={["Moon", "Mars", "Europa", "Titan"]}
             variant="underlined"
           />
+
+          <div className="flex flex-col justify-between items-center mt-4">
+            <h2 className="uppercase text-6xl text-white font-bellefair">
+              {activeButton == 0
+                ? "Moon"
+                : activeButton == 1
+                ? "Mars"
+                : activeButton == 2
+                ? "Europa"
+                : "Titan"}
+            </h2>
+            <h3 className="my-2 mx-4 text-base text-blue font-barlow font-normal not-italic">
+              {activeButton == 0
+                ? `See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.`
+                : activeButton == 1
+                ? `Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!`
+                : activeButton == 2
+                ? `The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.`
+                : `The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.`}
+            </h3>
+
+            <hr className="text-dark-gray h-2 w-11/12 my-2" />
+
+            <h4 className="uppercase text-blue font-barlow tracking-widest mt-4">
+              AVG. DISTANCE
+            </h4>
+            <span className="uppercase text-white text-2xl font-bellefair tracking-widest my-2">
+              225 MIL. km
+            </span>
+            <h5 className="uppercase text-blue font-barlow tracking-widest mt-4">
+              Est. travel time
+            </h5>
+            <span className="uppercase text-white text-2xl font-bellefair tracking-widest my-2">
+              9 months
+            </span>
+          </div>
         </div>
       </main>
       <footer></footer>
