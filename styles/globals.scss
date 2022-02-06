@@ -31,12 +31,36 @@ a {
   min-height: 100vh;
   height: auto;
   width: 100vw;
+  mix-blend-mode: screen;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     background-image: url("/home/background-home-tablet.jpg");
   }
   @media screen and (max-width: 767px) {
     background-image: url("/home/background-home-mobile.jpg");
+  }
+}
+
+.background--destination:before {
+  content: "";
+  background-image: url("/destination/background-destination-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.25;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  position: absolute;
+  transform: rotate(180deg);
+  mix-blend-mode: screen;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    background-image: url("/destination/background-destination-tablet.jpg");
+  }
+  @media screen and (max-width: 767px) {
+    background-image: url("/destination/background-destination-mobile.jpg");
   }
 }
 
@@ -52,6 +76,7 @@ a {
   height: auto;
   width: 100vw;
   position: absolute;
+  mix-blend-mode: screen;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     background-image: url("/crew/background-crew-tablet.jpg");
