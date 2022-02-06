@@ -46,13 +46,16 @@ a {
   background-image: url("/destination/background-destination-desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   opacity: 0.25;
   min-width: 100vw;
   min-height: 100vh;
   height: auto;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   transform: rotate(180deg);
   mix-blend-mode: screen;
 
@@ -69,13 +72,16 @@ a {
   background-image: url("/crew/background-crew-desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   opacity: 0.25;
   min-width: 100vw;
   min-height: 100vh;
   height: auto;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   mix-blend-mode: screen;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -91,13 +97,16 @@ a {
   background-image: url("/technology/background-technology-desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   opacity: 0.25;
   min-width: 100vw;
   min-height: 100vh;
   height: auto;
   width: 100vw;
-  position: absolute;
+  position: fixed;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     background-image: url("/technology/background-technology-tablet.jpg");
