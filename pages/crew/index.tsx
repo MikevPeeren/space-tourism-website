@@ -29,7 +29,7 @@ const Crew = () => {
             <span className="opacity-25 pr-4">02</span> Meet your crew
           </h1>
           <div className="flex flex-col justify-between items-center mt-8 border-b border-dark-gray w-5/6">
-            <div className="w-2/4">
+            <div className="w-3/4">
               {activeButton === 0 && (
                 <Image
                   src={DOUGLAS}
@@ -68,7 +68,7 @@ const Crew = () => {
           <ListSelector
             activeButton={activeButton}
             setActiveButton={setActiveButton}
-            amount={4}
+            content={["", "", "", ""]}
             variant="sm"
           />
 
