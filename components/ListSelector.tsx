@@ -17,7 +17,8 @@ const ListSelector = ({ activeButton, setActiveButton, content, variant }) => {
             "!bg-white text-black": activeButton === i && variant === "md",
             "text-blue tracking-widest uppercase w-10 h-10 mx-4":
               variant === "underlined",
-            "text-white": activeButton === i && variant === "underlined",
+            "text-white underline decoration-2 underline-offset-8 after:w-10":
+              activeButton === i && variant === "underlined",
           })}
           onClick={() => setActiveButton(i)}
         >
