@@ -10,7 +10,7 @@ const Home = () => {
         <meta name="description" content="Created by Mike van Peeren" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main className="flex flex-col min-h-screen text-center">
+      <main className="flex flex-col min-h-screen text-center relative">
         <div className="h-20">
           <Header />
         </div>
