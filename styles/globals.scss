@@ -30,7 +30,7 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  opacity: 0.25;
+  // opacity: 0.25;
   min-width: 100vw;
   min-height: 100vh;
   height: auto;
@@ -80,7 +80,7 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  opacity: 0.25;
+  // opacity: 0.25;
   min-width: 100vw;
   min-height: 100vh;
   height: auto;
@@ -105,7 +105,7 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  opacity: 0.25;
+  // opacity: 0.25;
   min-width: 100vw;
   min-height: 100vh;
   height: auto;
@@ -129,4 +129,9 @@ ul > li {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 2.7px;
+}
+
+.mantine-Drawer-drawer {
+  background: rgba(255, 255, 255, 0.001);
+  backdrop-filter: blur(25px);
 }
