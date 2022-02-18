@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import { Drawer, Burger } from "@mantine/core";
 
 import LOGO from "../public/shared/logo.svg";
-import HAMBURGER from "../public/shared/icon-hamburger.svg";
 
 const Header = () => {
   const [opened, setOpened] = useState(false);
@@ -38,6 +37,7 @@ const Header = () => {
         padding="xs"
         size="xs"
         hideCloseButton
+        noFocusTrap
         noOverlay
       >
         <nav>
