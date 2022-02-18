@@ -28,13 +28,15 @@ const Crew = () => {
           <h1 className="uppercase my-6 text-base text-white tracking-widest">
             <span className="opacity-25 pr-4 font-bold">02</span> Meet your crew
           </h1>
-          <div className="flex flex-col justify-between items-center mt-8 border-b border-dark-gray w-5/6">
-            <div className="w-3/4">
+          <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-5/6 border-opacity-30">
+            <div className="w-3/4 h-[223px]">
               {activeButton === 0 && (
                 <Image
                   src={DOUGLAS}
                   alt="Picture of Douglas Hurley"
-                  layout="responsive"
+                  layout="fixed"
+                  width={200}
+                  height={223}
                   priority
                 />
               )}
@@ -42,7 +44,9 @@ const Crew = () => {
                 <Image
                   src={MARK}
                   alt="Picture of Mark Shuttleworth"
-                  layout="responsive"
+                  layout="fixed"
+                  width={200}
+                  height={223}
                   priority
                 />
               )}
@@ -50,7 +54,9 @@ const Crew = () => {
                 <Image
                   src={VICTOR}
                   alt="Picture of Victor Glover"
-                  layout="responsive"
+                  layout="fixed"
+                  width={200}
+                  height={223}
                   priority
                 />
               )}
@@ -58,7 +64,9 @@ const Crew = () => {
                 <Image
                   src={ANOUSHEH}
                   alt="Picture of Anousheh Ansari"
-                  layout="responsive"
+                  layout="fixed"
+                  width={200}
+                  height={223}
                   priority
                 />
               )}
