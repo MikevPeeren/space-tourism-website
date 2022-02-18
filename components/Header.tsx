@@ -4,15 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { Drawer, Button, Group } from "@mantine/core";
-// External
-import classNames from "classnames";
+import { Drawer, Burger } from "@mantine/core";
 
 import LOGO from "../public/shared/logo.svg";
 import HAMBURGER from "../public/shared/icon-hamburger.svg";
-import CLOSE from "../public/shared/icon-close.svg";
-
-import styles from "./Header.module.scss";
 
 const Header = () => {
   const [opened, setOpened] = useState(false);
@@ -28,22 +23,31 @@ const Header = () => {
       <div className="w-full">
         <div className="flex flex-row items-center justify-between p-4">
           <Image src={LOGO} alt="" width={40} height={40} />
-          <button onClick={() => setOpened(true)}>
-            <Image src={HAMBURGER} alt="" width={24} height={21} />
-          </button>
+          <Burger
+            opened={opened}
+            color="white"
+            onClick={() => setOpened((o) => !o)}
+          />
         </div>
       </div>
 
       <Drawer
-        className={`${styles.hamburgerMenu} `}
         opened={opened}
         onClose={() => setOpened(false)}
         position="right"
         padding="xs"
         size="xs"
+        hideCloseButton
         noOverlay
       >
         <nav>
+          <div className="flex flex-row items-end justify-end pt-2 pr-3">
+            <Burger
+              opened={opened}
+              color="white"
+              onClick={() => setOpened((o) => !o)}
+            />
+          </div>
           <ul className="mt-20 ml-2 w-full">
             <li className="my-6 uppercase">
               <Link href="/" passHref>
