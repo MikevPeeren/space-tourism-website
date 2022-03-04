@@ -33,6 +33,7 @@ const Crew = () => {
               {activeButton === 0 && (
                 <Image
                   src={DOUGLAS}
+                  className="fade-in"
                   alt="Picture of Douglas Hurley"
                   layout="fixed"
                   width={200}
@@ -43,6 +44,7 @@ const Crew = () => {
               {activeButton === 1 && (
                 <Image
                   src={MARK}
+                  className="fade-in"
                   alt="Picture of Mark Shuttleworth"
                   layout="fixed"
                   width={200}
@@ -53,6 +55,7 @@ const Crew = () => {
               {activeButton === 2 && (
                 <Image
                   src={VICTOR}
+                  className="fade-in"
                   alt="Picture of Victor Glover"
                   layout="fixed"
                   width={200}
@@ -63,6 +66,7 @@ const Crew = () => {
               {activeButton === 3 && (
                 <Image
                   src={ANOUSHEH}
+                  className="fade-in"
                   alt="Picture of Anousheh Ansari"
                   layout="fixed"
                   width={200}

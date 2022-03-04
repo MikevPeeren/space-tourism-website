@@ -35,6 +35,7 @@ const Technology = () => {
             {activeButton === 0 && (
               <Image
                 src={VEHICLE}
+                className="fade-in"
                 alt="Picture of Launch Vehicle"
                 layout="responsive"
                 priority
@@ -43,6 +44,7 @@ const Technology = () => {
             {activeButton === 1 && (
               <Image
                 src={SPACEPORT}
+                className="fade-in"
                 alt="Picture of Spaceport"
                 layout="responsive"
                 priority
@@ -51,6 +53,7 @@ const Technology = () => {
             {activeButton === 2 && (
               <Image
                 src={CAPSULE}
+                className="fade-in"
                 alt="Picture of Capsule"
                 layout="responsive"
                 priority
