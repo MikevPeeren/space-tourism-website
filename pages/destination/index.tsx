@@ -34,6 +34,7 @@ const Destination = () => {
               {activeButton === 0 && (
                 <Image
                   src={MOON}
+                  className="fade-in"
                   alt="Picture of the planet Moon"
                   layout="responsive"
                   priority
@@ -42,6 +43,7 @@ const Destination = () => {
               {activeButton === 1 && (
                 <Image
                   src={MARS}
+                  className="fade-in"
                   alt="Picture of the planet Mars"
                   layout="responsive"
                   priority
@@ -50,6 +52,7 @@ const Destination = () => {
               {activeButton === 2 && (
                 <Image
                   src={EUROPA}
+                  className="fade-in"
                   alt="Picture of the planet Europa"
                   layout="responsive"
                   priority
@@ -58,6 +61,7 @@ const Destination = () => {
               {activeButton === 3 && (
                 <Image
                   src={TITAN}
+                  className="fade-in"
                   alt="Picture of the planet Titan"
                   layout="responsive"
                   priority
