@@ -8,24 +8,25 @@ import { Drawer, Burger } from "@mantine/core";
 
 import LOGO from "../public/shared/logo.svg";
 
+import useWindowDimensions from "@/utils/hooks/useWindowDimension";
+
 const Header = () => {
   const [opened, setOpened] = useState(false);
 
   const router = useRouter();
+  const { width } = useWindowDimensions();
 
-  // Initializing menu classes
-  // const navBarClassNames = classNames(
-  //   `${styles.hamburgerMenu} fixed top-0 z-10 w-3/5 min-h-screen right-0 text-left ease-in-out duration-1000 transform`,
+  const isMobile = width && width < 768;
 
   return (
     <header>
-      <div className="w-full">
-        <div className="flex flex-row items-center justify-between p-4">
+      <div className="w-full z-10">
+        <div className="flex flex-row items-center justify-between p-4 z-10">
           <Image src={LOGO} alt="" width={40} height={40} />
           <Burger
             opened={opened}
             color="white"
-            onClick={() => setOpened((o) => !o)}
+            onClick={() => setOpened(true)}
           />
         </div>
       </div>
