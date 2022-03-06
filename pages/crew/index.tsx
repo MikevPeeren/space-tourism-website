@@ -10,9 +10,12 @@ import DOUGLAS from "/public/crew/image-douglas-hurley.webp";
 import MARK from "/public/crew/image-mark-shuttleworth.webp";
 import VICTOR from "/public/crew/image-victor-glover.webp";
 import ANOUSHEH from "/public/crew/image-anousheh-ansari.webp";
+import useWindowDimensions from "@/utils/hooks/useWindowDimension";
 
 const Crew = () => {
   const [activeButton, setActiveButton] = useState(0);
+  const { width } = useWindowDimensions();
+  const isMobile = width && width < 768;
 
   return (
     <div className="background--crew">
@@ -24,99 +27,154 @@ const Crew = () => {
           <Header />
         </div>
 
-        <div className="flex flex-col justify-start items-center text-center mt-4 mx-1 ">
+        <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-center mt-4 mx-1">
           <h1 className="uppercase my-6 text-base text-white tracking-widest">
             <span className="opacity-25 pr-4 font-bold">02</span> Meet your crew
           </h1>
-          <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-5/6 border-opacity-30">
-            <div className="w-3/4 h-[223px]">
-              {activeButton === 0 && (
-                <Image
-                  src={DOUGLAS}
-                  className="fade-in"
-                  alt="Picture of Douglas Hurley"
-                  layout="fixed"
-                  width={200}
-                  height={223}
-                  priority
+          <div className="flex flex-col md:flex-col-reverse">
+            <div className="flex flex-col justify-start items-center text-center w-full">
+              <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-5/6 border-opacity-30 md:border-none">
+                {isMobile ? (
+                  <div className="w-3/4 md:w-2/4">
+                    {activeButton === 0 && (
+                      <Image
+                        src={DOUGLAS}
+                        className="fade-in"
+                        alt="Picture of Douglas Hurley"
+                        layout="fixed"
+                        width={200}
+                        height={223}
+                        priority
+                      />
+                    )}
+                    {activeButton === 1 && (
+                      <Image
+                        src={MARK}
+                        className="fade-in"
+                        alt="Picture of Mark Shuttleworth"
+                        layout="fixed"
+                        width={200}
+                        height={223}
+                        priority
+                      />
+                    )}
+                    {activeButton === 2 && (
+                      <Image
+                        src={VICTOR}
+                        className="fade-in"
+                        alt="Picture of Victor Glover"
+                        layout="fixed"
+                        width={200}
+                        height={223}
+                        priority
+                      />
+                    )}
+                    {activeButton === 3 && (
+                      <Image
+                        src={ANOUSHEH}
+                        className="fade-in"
+                        alt="Picture of Anousheh Ansari"
+                        layout="fixed"
+                        width={200}
+                        height={223}
+                        priority
+                      />
+                    )}
+                  </div>
+                ) : (
+                  <div className="w-3/4 md:w-2/4">
+                    {activeButton === 0 && (
+                      <Image
+                        src={DOUGLAS}
+                        className="fade-in"
+                        alt="Picture of Douglas Hurley"
+                        layout="responsive"
+                        priority
+                      />
+                    )}
+                    {activeButton === 1 && (
+                      <Image
+                        src={MARK}
+                        className="fade-in"
+                        alt="Picture of Mark Shuttleworth"
+                        layout="responsive"
+                        priority
+                      />
+                    )}
+                    {activeButton === 2 && (
+                      <Image
+                        src={VICTOR}
+                        className="fade-in"
+                        alt="Picture of Victor Glover"
+                        layout="responsive"
+                        priority
+                      />
+                    )}
+                    {activeButton === 3 && (
+                      <Image
+                        src={ANOUSHEH}
+                        className="fade-in"
+                        alt="Picture of Anousheh Ansari"
+                        layout="responsive"
+                        priority
+                      />
+                    )}
+                  </div>
+                )}
+              </div>
+              <div className="md:hidden">
+                <ListSelector
+                  activeButton={activeButton}
+                  setActiveButton={setActiveButton}
+                  content={["", "", "", ""]}
+                  variant="sm"
                 />
-              )}
-              {activeButton === 1 && (
-                <Image
-                  src={MARK}
-                  className="fade-in"
-                  alt="Picture of Mark Shuttleworth"
-                  layout="fixed"
-                  width={200}
-                  height={223}
-                  priority
-                />
-              )}
-              {activeButton === 2 && (
-                <Image
-                  src={VICTOR}
-                  className="fade-in"
-                  alt="Picture of Victor Glover"
-                  layout="fixed"
-                  width={200}
-                  height={223}
-                  priority
-                />
-              )}
-              {activeButton === 3 && (
-                <Image
-                  src={ANOUSHEH}
-                  className="fade-in"
-                  alt="Picture of Anousheh Ansari"
-                  layout="fixed"
-                  width={200}
-                  height={223}
-                  priority
-                />
-              )}
+              </div>
             </div>
-          </div>
 
-          <ListSelector
-            activeButton={activeButton}
-            setActiveButton={setActiveButton}
-            content={["", "", "", ""]}
-            variant="sm"
-          />
-
-          <div className="flex flex-col justify-between items-center mt-8">
-            <h2 className="uppercase text-base text-white opacity-50 font-bellefair mb-2">
-              {activeButton == 0
-                ? "Commander"
-                : activeButton == 1
-                ? "Mission Specialist"
-                : activeButton == 2
-                ? "Pilot"
-                : "Flight Engineer"}
-            </h2>
-            <h3 className="uppercase text-2xl text-white font-bellefair">
-              {activeButton == 0
-                ? "Douglas Hurley"
-                : activeButton == 1
-                ? "MARK SHUTTLEWORTH"
-                : activeButton == 2
-                ? "Victor Glover"
-                : "Anousheh Ansari"}
-            </h3>
-            <h4 className="my-6 mx-4 text-base text-blue font-barlow not-italic">
-              {activeButton == 0
-                ? `Douglas Gerald Hurley is an American engineer, former Marine Corps
+            <div className="flex flex-col justify-between items-center mt-8">
+              <h2 className="uppercase text-base text-white opacity-50 font-bellefair mb-2">
+                {activeButton == 0
+                  ? "Commander"
+                  : activeButton == 1
+                  ? "Mission Specialist"
+                  : activeButton == 2
+                  ? "Pilot"
+                  : "Flight Engineer"}
+              </h2>
+              <h3 className="uppercase text-2xl text-white font-bellefair">
+                {activeButton == 0
+                  ? "Douglas Hurley"
+                  : activeButton == 1
+                  ? "MARK SHUTTLEWORTH"
+                  : activeButton == 2
+                  ? "Victor Glover"
+                  : "Anousheh Ansari"}
+              </h3>
+              <h4 className="my-6 mx-4 md:w-2/4 text-base text-blue font-barlow not-italic">
+                {activeButton == 0
+                  ? `Douglas Gerald Hurley is an American engineer, former Marine Corps
               pilot and former NASA astronaut. He launched into space for the
               third time as commander of Crew Dragon Demo-2.`
-                : activeButton == 1
-                ? `Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.`
-                : activeButton == 2
-                ? `Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.`
-                : `Anousheh Ansari is an Iranian American engineer and co-founder of
+                  : activeButton == 1
+                  ? `Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.`
+                  : activeButton == 2
+                  ? `Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.`
+                  : `Anousheh Ansari is an Iranian American engineer and co-founder of
               Prodea Systems. Ansari was the fourth self-funded space tourist,
               the first self-funded woman to fly to the ISS, and the first
               Iranian in space.`}
-            </h4>
+              </h4>
+
+              <div className="hidden md:block">
+                <ListSelector
+                  activeButton={activeButton}
+                  setActiveButton={setActiveButton}
+                  content={["", "", "", ""]}
+                  variant="sm"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </main>
