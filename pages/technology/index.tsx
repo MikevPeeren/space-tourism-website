@@ -23,7 +23,7 @@ const Technology = () => {
           <Header />
         </div>
 
-        <div className="flex flex-col justify-start items-center text-center mt-4 mx-1 ">
+        <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-left mt-4 mx-1">
           <h1 className="uppercase my-6 text-base text-white tracking-widest">
             <span className="opacity-25 pr-4 font-bold">03</span>Space Launch
             101
@@ -69,9 +69,9 @@ const Technology = () => {
           variant="md"
         />
 
-        <div className="flex flex-col justify-start items-center text-center mt-4 mx-1 "></div>
-        <div className="flex flex-col justify-between items-center mt-8">
-          <h2 className="uppercase text-base text-white opacity-50 font-bellefair mb-2">
+        <div className="flex flex-col justify-start items-center text-center mt-4 mx-1"></div>
+        <div className="flex flex-col justify-between items-center mt-8 md:mb-8">
+          <h2 className="uppercase text-base text-blue font-bellefair mb-2">
             The Terminology
           </h2>
           <h3 className="uppercase text-2xl text-white font-bellefair">
@@ -81,7 +81,7 @@ const Technology = () => {
               ? "SPACEPORT"
               : "SPACE CAPSULE"}
           </h3>
-          <h4 className="my-6 mx-4 text-base text-blue font-barlow not-italic">
+          <h4 className="my-6 mx-4 text-base md:w-2/4 text-blue font-barlow not-italic">
             {activeButton == 0
               ? `A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!`
               : activeButton == 1
