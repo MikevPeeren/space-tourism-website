@@ -24,60 +24,62 @@ const Destination = () => {
           <Header />
         </div>
 
-        <div className="flex flex-col justify-start items-center text-center mt-4 mx-1 ">
+        <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-center mt-4 mx-1">
           <h1 className="uppercase my-6 text-base text-white tracking-widest">
             <span className="opacity-25 pr-4 font-bold">01</span> Pick your
             destination
           </h1>
-          <div className="flex flex-col justify-between items-center mt-2 w-5/6">
-            <div className="w-3/5">
-              {activeButton === 0 && (
-                <Image
-                  src={MOON}
-                  className="fade-in"
-                  alt="Picture of the planet Moon"
-                  layout="responsive"
-                  priority
-                />
-              )}
-              {activeButton === 1 && (
-                <Image
-                  src={MARS}
-                  className="fade-in"
-                  alt="Picture of the planet Mars"
-                  layout="responsive"
-                  priority
-                />
-              )}
-              {activeButton === 2 && (
-                <Image
-                  src={EUROPA}
-                  className="fade-in"
-                  alt="Picture of the planet Europa"
-                  layout="responsive"
-                  priority
-                />
-              )}
-              {activeButton === 3 && (
-                <Image
-                  src={TITAN}
-                  className="fade-in"
-                  alt="Picture of the planet Titan"
-                  layout="responsive"
-                  priority
-                />
-              )}
+
+          <div className="flex flex-col justify-start items-center text-center w-full">
+            <div className="flex flex-col justify-between items-center mt-2 w-5/6">
+              <div className="w-3/5">
+                {activeButton === 0 && (
+                  <Image
+                    src={MOON}
+                    className="fade-in"
+                    alt="Picture of the planet Moon"
+                    layout="responsive"
+                    priority
+                  />
+                )}
+                {activeButton === 1 && (
+                  <Image
+                    src={MARS}
+                    className="fade-in"
+                    alt="Picture of the planet Mars"
+                    layout="responsive"
+                    priority
+                  />
+                )}
+                {activeButton === 2 && (
+                  <Image
+                    src={EUROPA}
+                    className="fade-in"
+                    alt="Picture of the planet Europa"
+                    layout="responsive"
+                    priority
+                  />
+                )}
+                {activeButton === 3 && (
+                  <Image
+                    src={TITAN}
+                    className="fade-in"
+                    alt="Picture of the planet Titan"
+                    layout="responsive"
+                    priority
+                  />
+                )}
+              </div>
             </div>
+            <ListSelector
+              activeButton={activeButton}
+              setActiveButton={setActiveButton}
+              content={["Moon", "Mars", "Europa", "Titan"]}
+              variant="underlined"
+            />
           </div>
 
-          <ListSelector
-            activeButton={activeButton}
-            setActiveButton={setActiveButton}
-            content={["Moon", "Mars", "Europa", "Titan"]}
-            variant="underlined"
-          />
-
-          <div className="flex flex-col justify-between items-center mt-4">
+          <div className="flex flex-col justify-between items-center md:mt-10 mt-4">
             <h2 className="uppercase text-6xl text-white font-bellefair">
               {activeButton == 0
                 ? "Moon"
@@ -87,7 +89,7 @@ const Destination = () => {
                 ? "Europa"
                 : "Titan"}
             </h2>
-            <h3 className="my-2 mx-4 text-base text-blue font-barlow font-normal not-italic">
+            <h3 className="my-2 mx-4 md:w-3/4 md:my-4 text-base text-blue font-barlow font-normal not-italic">
               {activeButton == 0
                 ? `See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.`
                 : activeButton == 1
@@ -99,18 +101,24 @@ const Destination = () => {
 
             <hr className="text-dark-gray h-2 w-11/12 my-2" />
 
-            <h4 className="uppercase text-blue font-barlow tracking-widest mt-4">
-              AVG. DISTANCE
-            </h4>
-            <span className="uppercase text-white text-2xl font-bellefair tracking-widest my-2">
-              225 MIL. km
-            </span>
-            <h5 className="uppercase text-blue font-barlow tracking-widest mt-4">
-              Est. travel time
-            </h5>
-            <span className="uppercase text-white text-2xl font-bellefair tracking-widest my-2">
-              9 months
-            </span>
+            <div className="flex flex-col justify-between md:flex-row md:mb-10">
+              <div className="flex flex-col mx-5">
+                <h4 className="uppercase text-blue font-barlow tracking-widest mt-4">
+                  AVG. DISTANCE
+                </h4>
+                <span className="uppercase text-white text-2xl font-bellefair tracking-widest my-2">
+                  225 MIL. km
+                </span>
+              </div>
+              <div className="flex flex-col mx-5">
+                <h5 className="uppercase text-blue font-barlow tracking-widest mt-4">
+                  Est. travel time
+                </h5>
+                <span className="uppercase text-white text-2xl font-bellefair tracking-widest my-2">
+                  9 months
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </main>
