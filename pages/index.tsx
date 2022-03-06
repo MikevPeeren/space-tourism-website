@@ -22,7 +22,7 @@ const Home = () => {
             <h1 className="uppercase my-6 text-base lg:text-xl text-blue tracking-wider lg:tracking-widest">
               So, you want to travel to
             </h1>
-            <h2 className="uppercase text-white text-7xl md:text-9xl font-bellefair">
+            <h2 className="uppercase text-white text-7xl md:text-8xl lg:text-9xl font-bellefair">
               Space
             </h2>
             <h3 className="my-6 mx-4 lg:mx-0 text-base lg:text-lg text-blue max-w-md explore button font-barlow lg:tracking-widest">
