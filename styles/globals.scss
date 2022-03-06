@@ -136,6 +136,11 @@ ul > li {
   backdrop-filter: blur(25px);
 }
 
+.navBackground {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+}
+
 .fade-in {
   opacity: 1;
   animation-name: fadeInOpacity;
