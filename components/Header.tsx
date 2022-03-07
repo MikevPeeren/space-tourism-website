@@ -22,66 +22,83 @@ const Header = () => {
     <header>
       <div className="w-full z-10">
         {!isMobile && (
-          <div className="flex flex-row justify-between z-10">
-            <div className="ml-8 mt-4">
+          <div className="flex flex-row justify-between lg:items-center z-10 lg:mt-5">
+            <div className="ml-8 mt-4 lg:ml-10 lg:mt-0">
               <Image src={LOGO} className="m-4" alt="" width={40} height={40} />
             </div>
-            <nav className="navBackground flex top-0">
-              <ul className="flex justify-between items-end flex-row w-full px-10">
-                <li
-                  className={`uppercase px-4 mt-6 ${
-                    router.pathname === "/"
-                      ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
-                      : "pb-9"
-                  }`}
-                >
-                  <Link href="/" passHref>
-                    <a>
-                      <span className="font-normal mb-10">Home</span>
-                    </a>
-                  </Link>
-                </li>
-                <li
-                  className={`uppercase px-4 mt-6 ${
-                    router.pathname === "/destination"
-                      ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
-                      : "pb-9"
-                  }`}
-                >
-                  <Link href="/destination" passHref>
-                    <a>
-                      <span className="font-normal">Destination</span>
-                    </a>
-                  </Link>
-                </li>
-                <li
-                  className={`uppercase px-4 mt-6 ${
-                    router.pathname === "/crew"
-                      ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
-                      : "pb-9"
-                  }`}
-                >
-                  <Link href="/crew" passHref>
-                    <a>
-                      <span className="font-normal"> Crew</span>
-                    </a>
-                  </Link>
-                </li>
-                <li
-                  className={`uppercase px-4 mt-6 ${
-                    router.pathname === "/technology"
-                      ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
-                      : "pb-9"
-                  }`}
-                >
-                  <Link href="/technology" passHref>
-                    <a>
-                      <span className="font-normal"> Technology</span>
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+            <div className="relative">
+              <div className="flex items-center">
+                <div className="hidden lg:block absolute xl:-left-96 lg:-left-72 flex justify-center text-center items-center z-10 h-px lg:w-2/4 xl:w-4/6 bg-white opacity-25"></div>
+                <nav className="navBackground flex top-0">
+                  <ul className="flex justify-between items-end flex-row w-full px-10">
+                    <li
+                      className={`uppercase px-4 mt-6 ${
+                        router.pathname === "/"
+                          ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
+                          : "pb-9"
+                      }`}
+                    >
+                      <Link href="/" passHref>
+                        <a className="flex justify-between flex-row">
+                          <span className="hidden lg:block font-bold mr-3">
+                            00
+                          </span>
+                          <span className="font-normal">Home</span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className={`uppercase px-4 mt-6 ${
+                        router.pathname === "/destination"
+                          ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
+                          : "pb-9"
+                      }`}
+                    >
+                      <Link href="/destination" passHref>
+                        <a className="flex justify-between flex-row">
+                          <span className="hidden lg:block font-bold mr-3">
+                            01
+                          </span>
+                          <span className="font-normal">Destination</span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className={`uppercase px-4 mt-6 ${
+                        router.pathname === "/crew"
+                          ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
+                          : "pb-9"
+                      }`}
+                    >
+                      <Link href="/crew" passHref>
+                        <a className="flex justify-between flex-row">
+                          <span className="hidden lg:block font-bold mr-3">
+                            02
+                          </span>
+                          <span className="font-normal"> Crew</span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className={`uppercase px-4 mt-6 ${
+                        router.pathname === "/technology"
+                          ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
+                          : "pb-9"
+                      }`}
+                    >
+                      <Link href="/technology" passHref>
+                        <a className="flex justify-between flex-row">
+                          <span className="hidden lg:block font-bold mr-3">
+                            03
+                          </span>
+                          <span className="font-normal"> Technology</span>
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
           </div>
         )}
         {isMobile && (

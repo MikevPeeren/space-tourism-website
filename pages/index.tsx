@@ -34,7 +34,7 @@ const Home = () => {
           </div>
           <div className="absolute lg:static inset-x-0 bottom-40 lg:bottom-0 h-16 lg:h-auto">
             <button
-              className="bg-white m-auto rounded-full w-[150px] h-[150px] font-bellefair text-xl text-black uppercase tracking-wider leading-6 hover:ring-[40px] hover:ring-gray hover:ring-opacity-60 transition ease-in-out duration-500"
+              className="bg-white m-auto rounded-full w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] font-bellefair text-xl text-black uppercase tracking-wider leading-6 hover:ring-[40px] hover:ring-gray hover:ring-opacity-60 transition ease-in-out duration-500"
               onClick={() => router.push("/destination")}
             >
               Explore
