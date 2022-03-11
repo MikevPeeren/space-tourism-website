@@ -24,9 +24,9 @@ const Technology = () => {
         </div>
 
         <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-left mt-4 mx-1">
-          <h1 className="uppercase my-6 text-base text-white tracking-widest">
-            <span className="opacity-25 pr-4 font-bold">03</span>Space Launch
-            101
+          <h1 className="uppercase my-6 lg:my-20 lg:mx-20 text-base lg:text-2xl text-white tracking-widest">
+            <span className="opacity-25 pr-4 font-bold">01</span> Pick your
+            destination
           </h1>
         </div>
 

@@ -83,7 +83,7 @@ const Destination = () => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-between xl:justify-start items-center lg:items-start md:mt-10 mt-4 lg:basis-6/12 xl:basis-4/12">
+            <div className="flex flex-col justify-between xl:justify-start items-center lg:items-start md:mt-10 mt-4 lg:basis-6/12 xl:basis-4/12 ">
               <div className="hidden md:block">
                 <ListSelector
                   activeButton={activeButton}
@@ -116,7 +116,7 @@ const Destination = () => {
                 <hr className="text-dark-gray h-2 w-11/12 my-2" />
 
                 <div className="flex flex-col justify-between md:flex-row md:mb-10 lg:text-left">
-                  <div className="flex flex-col mx-5 lg:mx-0">
+                  <div className="flex flex-col mx-5 lg:mx-0 lg:pr-10">
                     <h4 className="uppercase text-blue font-barlow tracking-widest mt-4">
                       AVG. DISTANCE
                     </h4>

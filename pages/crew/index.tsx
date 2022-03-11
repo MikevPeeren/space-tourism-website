@@ -28,12 +28,13 @@ const Crew = () => {
         </div>
 
         <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-center mt-4 mx-1">
-          <h1 className="uppercase my-6 text-base text-white tracking-widest">
-            <span className="opacity-25 pr-4 font-bold">02</span> Meet your crew
+          <h1 className="uppercase my-6 lg:my-20 lg:mx-20 text-base lg:text-2xl text-white tracking-widest">
+            <span className="opacity-25 pr-4 font-bold">01</span> Pick your
+            destination
           </h1>
-          <div className="flex flex-col md:flex-col-reverse">
+          <div className="flex flex-col lg:flex-row-reverse w-full">
             <div className="flex flex-col justify-start items-center text-center w-full">
-              <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-5/6 border-opacity-30 md:border-none">
+              <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-5/6 lg:w-2/4  border-opacity-30 md:border-none static">
                 {isMobile ? (
                   <div className="w-3/4 md:w-2/4">
                     {activeButton === 0 && (
@@ -82,7 +83,7 @@ const Crew = () => {
                     )}
                   </div>
                 ) : (
-                  <div className="w-3/4 md:w-2/4">
+                  <div className="w-3/4 md:w-5/12 lg:w-4/12 absolute bottom-0 lg:right-10">
                     {activeButton === 0 && (
                       <Image
                         src={DOUGLAS}
@@ -96,6 +97,8 @@ const Crew = () => {
                       <Image
                         src={MARK}
                         className="fade-in"
+                        width={100}
+                        height={125}
                         alt="Picture of Mark Shuttleworth"
                         layout="responsive"
                         priority
@@ -132,8 +135,8 @@ const Crew = () => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-between items-center mt-8">
-              <h2 className="uppercase text-base text-white opacity-50 font-bellefair mb-2">
+            <div className="flex flex-col justify-between items-center lg:items-start lg:justify-start mt-20 lg:my-20 lg:mx-20">
+              <h2 className="uppercase text-base lg:text-2xl text-white opacity-50 font-bellefair mb-2 lg:mb-4">
                 {activeButton == 0
                   ? "Commander"
                   : activeButton == 1
@@ -142,7 +145,7 @@ const Crew = () => {
                   ? "Pilot"
                   : "Flight Engineer"}
               </h2>
-              <h3 className="uppercase text-2xl text-white font-bellefair">
+              <h3 className="uppercase text-2xl lg:text-6xl text-white lg:text-left font-bellefair">
                 {activeButton == 0
                   ? "Douglas Hurley"
                   : activeButton == 1
@@ -151,7 +154,7 @@ const Crew = () => {
                   ? "Victor Glover"
                   : "Anousheh Ansari"}
               </h3>
-              <h4 className="my-6 mx-4 md:w-2/4 text-base text-blue font-barlow not-italic">
+              <h4 className="my-6 mx-4 md:w-2/4 lg:w-3/4 lg:mx-0 lg:text-left lg:text-xl  text-base text-blue font-barlow not-italic">
                 {activeButton == 0
                   ? `Douglas Gerald Hurley is an American engineer, former Marine Corps
               pilot and former NASA astronaut. He launched into space for the
