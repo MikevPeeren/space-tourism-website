@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -12,16 +12,21 @@ import useWindowDimensions from "@/utils/hooks/useWindowDimension";
 
 const Header = () => {
   const [opened, setOpened] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const router = useRouter();
   const { width } = useWindowDimensions();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const isMobile = width && width < 768;
 
   return (
     <header>
       <div className="w-full z-10">
-        {!isMobile && (
+        {mounted && !isMobile && (
           <div className="flex flex-row justify-between lg:items-center z-10 lg:mt-5">
             <div className="ml-8 mt-4 lg:ml-10 lg:mt-0">
               <Image src={LOGO} className="m-4" alt="" width={40} height={40} />
@@ -101,7 +106,7 @@ const Header = () => {
             </div>
           </div>
         )}
-        {isMobile && (
+        {mounted && isMobile && (
           <div className="flex flex-row justify-between p-4 z-10">
             <Image src={LOGO} className="m-4" alt="" width={40} height={40} />
             <Burger
@@ -113,7 +118,7 @@ const Header = () => {
         )}
       </div>
 
-      {isMobile && (
+      {mounted && isMobile && (
         <Drawer
           opened={opened}
           onClose={() => setOpened(false)}

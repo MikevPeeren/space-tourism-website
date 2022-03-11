@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -14,7 +14,13 @@ import useWindowDimensions from "@/utils/hooks/useWindowDimension";
 
 const Crew = () => {
   const [activeButton, setActiveButton] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const { width } = useWindowDimensions();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const isMobile = width && width < 768;
 
   return (
@@ -34,8 +40,8 @@ const Crew = () => {
           </h1>
           <div className="flex flex-col lg:flex-row-reverse w-full">
             <div className="flex flex-col justify-start items-center text-center w-full">
-              <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-5/6 lg:w-2/4  border-opacity-30 md:border-none static">
-                {isMobile ? (
+              <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-5/6 lg:w-2/4 border-opacity-30 md:border-none static">
+                {mounted && isMobile ? (
                   <div className="w-3/4 md:w-2/4">
                     {activeButton === 0 && (
                       <Image
@@ -83,7 +89,7 @@ const Crew = () => {
                     )}
                   </div>
                 ) : (
-                  <div className="w-3/4 md:w-5/12 lg:w-4/12 absolute bottom-0 lg:right-10">
+                  <div className="w-3/4 md:w-4/12 lg:w-4/12 absolute bottom-0 lg:right-10">
                     {activeButton === 0 && (
                       <Image
                         src={DOUGLAS}
