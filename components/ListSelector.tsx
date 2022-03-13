@@ -1,18 +1,36 @@
+import React, { Dispatch, SetStateAction } from "react";
+
 import classNames from "classnames";
 
-const ListSelector = ({ activeButton, setActiveButton, content, variant }) => {
+interface IListSelector {
+  activeButton: number;
+  setActiveButton: Dispatch<SetStateAction<number>>;
+  extraClassNames?: string;
+  content: string[] | number[];
+  variant: string;
+}
+
+const ListSelector = ({
+  activeButton,
+  setActiveButton,
+  extraClassNames,
+  content,
+  variant,
+}: IListSelector) => {
   return (
-    <div className="flex flex-row justify-center items-center mt-8">
+    <div
+      className={`flex flex-row justify-center items-center mt-8 ${extraClassNames}`}
+    >
       {content.map((x, i) => (
         <button
           key={i}
           id={String(i)}
           className={classNames({
-            "cursor-pointer transition ease-in-out delay-150 duration-200":
+            "cursor-pointer transition ease-in-out delay-150 duration-200 my-4":
               true,
             "rounded-full bg-white w-3 h-3 mx-2": variant === "sm",
             "bg-opacity-20": activeButton != i,
-            "rounded-full bg-black text-white border border-dark-gray w-10 h-10 mx-2":
+            "rounded-full bg-black text-white border border-dark-gray w-20 h-20 mx-2":
               variant === "md",
             "!bg-white text-black": activeButton === i && variant === "md",
             "text-blue tracking-widest uppercase w-10 h-10 mx-4":

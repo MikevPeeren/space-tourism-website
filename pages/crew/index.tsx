@@ -160,7 +160,7 @@ const Crew = () => {
                   ? "Victor Glover"
                   : "Anousheh Ansari"}
               </h3>
-              <h4 className="my-6 mx-4 md:w-2/4 lg:w-3/4 lg:mx-0 lg:text-left lg:text-xl  text-base text-blue font-barlow not-italic">
+              <h4 className="my-6 mx-4 md:w-2/4 lg:w-3/4 lg:mx-0 lg:text-left lg:text-xl text-base text-blue font-barlow not-italic">
                 {activeButton == 0
                   ? `Douglas Gerald Hurley is an American engineer, former Marine Corps
               pilot and former NASA astronaut. He launched into space for the
