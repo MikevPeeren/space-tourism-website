@@ -126,6 +126,7 @@ const Crew = () => {
               <div className="md:hidden">
                 <ListSelector
                   activeButton={activeButton}
+                  page="crew"
                   setActiveButton={setActiveButton}
                   content={["", "", "", ""]}
                   variant="sm"
@@ -170,6 +171,7 @@ const Crew = () => {
               <div className="hidden md:block">
                 <ListSelector
                   activeButton={activeButton}
+                  page="crew desktop"
                   setActiveButton={setActiveButton}
                   content={["", "", "", ""]}
                   variant="sm"

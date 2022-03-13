@@ -81,6 +81,7 @@ const Technology = () => {
           <div className="mt-10 lg:hidden block">
             <ListSelector
               activeButton={activeButton}
+              page="technology"
               setActiveButton={setActiveButton}
               content={[1, 2, 3]}
               variant="md"
@@ -109,6 +110,7 @@ const Technology = () => {
           <div className="mt-10 lg:mt-0 hidden lg:block">
             <ListSelector
               activeButton={activeButton}
+              page="technology desktop"
               extraClassNames="flex flex-col justify-around mx-10 mt-0"
               setActiveButton={setActiveButton}
               content={[1, 2, 3]}

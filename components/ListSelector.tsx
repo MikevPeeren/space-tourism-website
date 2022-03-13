@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 interface IListSelector {
   activeButton: number;
+  page: string;
   setActiveButton: Dispatch<SetStateAction<number>>;
   extraClassNames?: string;
   content: string[] | number[];
@@ -12,6 +13,7 @@ interface IListSelector {
 
 const ListSelector = ({
   activeButton,
+  page,
   setActiveButton,
   extraClassNames,
   content,
@@ -24,7 +26,8 @@ const ListSelector = ({
       {content.map((x, i) => (
         <button
           key={i}
-          id={String(i)}
+          id={page + " navigationButton " + i}
+          aria-label={"display selector_" + 1}
           className={classNames({
             "cursor-pointer transition ease-in-out delay-150 duration-200 my-4":
               true,

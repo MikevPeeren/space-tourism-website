@@ -75,6 +75,7 @@ const Destination = () => {
                 <div className="md:hidden">
                   <ListSelector
                     activeButton={activeButton}
+                    page="destination"
                     setActiveButton={setActiveButton}
                     content={["Moon", "Mars", "Europa", "Titan"]}
                     variant="underlined"
@@ -87,6 +88,7 @@ const Destination = () => {
               <div className="hidden md:block">
                 <ListSelector
                   activeButton={activeButton}
+                  page="destination desktop"
                   setActiveButton={setActiveButton}
                   content={["Moon", "Mars", "Europa", "Titan"]}
                   variant="underlined"

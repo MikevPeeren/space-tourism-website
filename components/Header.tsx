@@ -29,7 +29,14 @@ const Header = () => {
         {mounted && !isMobile && (
           <div className="flex flex-row justify-between lg:items-center z-10 lg:mt-5">
             <div className="ml-8 mt-4 lg:ml-10 lg:mt-0">
-              <Image src={LOGO} className="m-4" alt="" width={40} height={40} />
+              <Image
+                src={LOGO}
+                className="m-4"
+                alt=""
+                width={40}
+                height={40}
+                priority
+              />
             </div>
             <div className="relative">
               <div className="flex items-center">
@@ -108,9 +115,17 @@ const Header = () => {
         )}
         {mounted && isMobile && (
           <div className="flex flex-row justify-between p-4 z-10">
-            <Image src={LOGO} className="m-4" alt="" width={40} height={40} />
+            <Image
+              src={LOGO}
+              className="m-4"
+              alt=""
+              width={40}
+              height={40}
+              priority
+            />
             <Burger
               opened={opened}
+              aria-label="Open navigation"
               color="white"
               onClick={() => setOpened(!opened)}
             />
