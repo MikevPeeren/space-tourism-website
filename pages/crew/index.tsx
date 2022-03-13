@@ -33,24 +33,22 @@ const Crew = () => {
           <Header />
         </div>
 
-        <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-center mt-4 mx-1">
+        <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-center mt-4 mx-1 min-h-screen">
           <h1 className="uppercase my-6 lg:my-20 lg:mx-20 text-base lg:text-2xl text-white tracking-widest">
             <span className="opacity-25 pr-4 font-bold">01</span> Pick your
             destination
           </h1>
-          <div className="flex flex-col lg:flex-row-reverse w-full">
-            <div className="flex flex-col justify-start items-center text-center w-full">
-              <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-5/6 lg:w-2/4 border-opacity-30 md:border-none static">
+          <div className="flex flex-col md:flex-col-reverse lg:flex-row-reverse w-full h-full min-h-screen">
+            <div className="flex flex-col justify-between items-center text-center w-full">
+              <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-4/6 lg:w-2/4 border-opacity-30 md:border-none ">
                 {mounted && isMobile ? (
-                  <div className="w-3/4 md:w-2/4">
+                  <div className="w-full h-3/4 md:w-2/4">
                     {activeButton === 0 && (
                       <Image
                         src={DOUGLAS}
                         className="fade-in"
                         alt="Picture of Douglas Hurley"
-                        layout="fixed"
-                        width={200}
-                        height={223}
+                        layout="responsive"
                         priority
                       />
                     )}
@@ -59,9 +57,7 @@ const Crew = () => {
                         src={MARK}
                         className="fade-in"
                         alt="Picture of Mark Shuttleworth"
-                        layout="fixed"
-                        width={200}
-                        height={223}
+                        layout="responsive"
                         priority
                       />
                     )}
@@ -70,9 +66,7 @@ const Crew = () => {
                         src={VICTOR}
                         className="fade-in"
                         alt="Picture of Victor Glover"
-                        layout="fixed"
-                        width={200}
-                        height={223}
+                        layout="responsive"
                         priority
                       />
                     )}
@@ -81,15 +75,13 @@ const Crew = () => {
                         src={ANOUSHEH}
                         className="fade-in"
                         alt="Picture of Anousheh Ansari"
-                        layout="fixed"
-                        width={200}
-                        height={223}
+                        layout="responsive"
                         priority
                       />
                     )}
                   </div>
                 ) : (
-                  <div className="w-3/4 md:w-4/12 lg:w-4/12 absolute bottom-0 lg:right-10">
+                  <div className="w-3/4 md:w-4/12 lg:w-4/12 lg:absolute bottom-0 lg:right-10">
                     {activeButton === 0 && (
                       <Image
                         src={DOUGLAS}
@@ -141,7 +133,7 @@ const Crew = () => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-between items-center lg:items-start lg:justify-start mt-20 lg:my-20 lg:mx-20">
+            <div className="flex flex-col justify-between items-center lg:items-start lg:justify-start mt-10 lg:mt-20 lg:my-20 lg:mx-20">
               <h2 className="uppercase text-base lg:text-2xl text-white opacity-50 font-bellefair mb-2 lg:mb-4">
                 {activeButton == 0
                   ? "Commander"

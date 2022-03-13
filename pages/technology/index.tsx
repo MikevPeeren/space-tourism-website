@@ -24,8 +24,7 @@ const Technology = () => {
     setMounted(true);
   }, []);
 
-  console.log(activeButton);
-  const isMobile = width && width < 768;
+  const renderPortrait = width && width < 1024;
 
   return (
     <div className="background--technology">
@@ -49,7 +48,7 @@ const Technology = () => {
             <div className="w-full lg:max-w-[500px] block lg:right-0 lg:absolute">
               {activeButton === 0 && (
                 <Image
-                  src={mounted && !isMobile ? VEHICLE_PORTRAIT : VEHICLE}
+                  src={mounted && !renderPortrait ? VEHICLE_PORTRAIT : VEHICLE}
                   className="fade-in"
                   alt="Picture of Launch Vehicle"
                   layout="responsive"
@@ -58,7 +57,9 @@ const Technology = () => {
               )}
               {activeButton === 1 && (
                 <Image
-                  src={mounted && !isMobile ? SPACEPORT_PORTRAIT : SPACEPORT}
+                  src={
+                    mounted && !renderPortrait ? SPACEPORT_PORTRAIT : SPACEPORT
+                  }
                   className="fade-in"
                   alt="Picture of Spaceport"
                   layout="responsive"
@@ -67,7 +68,7 @@ const Technology = () => {
               )}
               {activeButton === 2 && (
                 <Image
-                  src={mounted && !isMobile ? CAPSULE_PORTRAIT : CAPSULE}
+                  src={mounted && !renderPortrait ? CAPSULE_PORTRAIT : CAPSULE}
                   className="fade-in"
                   alt="Picture of Capsule"
                   layout="responsive"
@@ -77,7 +78,7 @@ const Technology = () => {
             </div>
           </div>
 
-          <div className="mt-10 md:hidden block">
+          <div className="mt-10 lg:hidden block">
             <ListSelector
               activeButton={activeButton}
               setActiveButton={setActiveButton}
@@ -105,7 +106,7 @@ const Technology = () => {
                 : `A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.`}
             </h4>
           </div>
-          <div className="mt-10 lg:mt-0 hidden md:block">
+          <div className="mt-10 lg:mt-0 hidden lg:block">
             <ListSelector
               activeButton={activeButton}
               extraClassNames="flex flex-col justify-around mx-10 mt-0"
