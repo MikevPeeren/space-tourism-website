@@ -45,7 +45,7 @@ const Technology = () => {
 
         <div className="flex flex-col lg:flex-row-reverse items-center mb-20">
           <div className="mt-3 lg:mt-0 w-full block lg:relative flex items-center">
-            <div className="w-full lg:max-w-[500px] block lg:right-0 lg:absolute">
+            <div className="w-full lg:max-w-[500px] block lg:right-0 lg:absolute lg:mt-14">
               {activeButton === 0 && (
                 <Image
                   src={mounted && !renderPortrait ? VEHICLE_PORTRAIT : VEHICLE}
