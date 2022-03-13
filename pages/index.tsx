@@ -13,11 +13,11 @@ const Home = () => {
         <meta name="description" content="Created by Mike van Peeren" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main className="flex flex-col text-center lg:text-left h-full">
+      <main className="flex flex-col text-center lg:text-left h-full min-h-screen">
         <div className="h-20">
           <Header />
         </div>
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-around lg:min-h-full">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-around lg:min-h-full min-h-screen">
           <div className="flex flex-col items-center lg:items-start md:mt-10 lg:mt-0">
             <h1 className="uppercase my-6 text-base lg:text-xl text-blue tracking-wider lg:tracking-widest">
               So, you want to travel to
@@ -32,9 +32,9 @@ const Home = () => {
               this world experience!
             </h3>
           </div>
-          <div className="absolute lg:static inset-x-0 bottom-40 lg:bottom-0 h-16 lg:h-auto">
+          <div className=" lg:static inset-x-0 bottom-40 lg:bottom-0 h-16 lg:h-auto">
             <button
-              className="relative bg-white m-auto rounded-full w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] font-bellefair text-xl text-black uppercase tracking-wider leading-6 hover:ring-[40px] hover:ring-gray hover:ring-opacity-60 transition ease-in-out duration-500"
+              className="relative bg-white m-auto rounded-full w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] font-bellefair text-xl text-black uppercase tracking-wider leading-6 hover:ring-[40px] hover:ring-gray hover:ring-opacity-60 transition ease-in-out duration-500 bottom-0 mt-10"
               onClick={() => router.push("/destination")}
             >
               Explore
