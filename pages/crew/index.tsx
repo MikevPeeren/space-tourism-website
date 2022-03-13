@@ -38,7 +38,7 @@ const Crew = () => {
             <span className="opacity-25 pr-4 font-bold">01</span> Pick your
             destination
           </h1>
-          <div className="flex flex-col md:flex-col-reverse lg:flex-row-reverse w-full h-full min-h-screen">
+          <div className="flex flex-col md:flex-col-reverse lg:flex-row-reverse w-full h-full">
             <div className="flex flex-col justify-between items-center text-center w-full">
               <div className="flex flex-col justify-between items-center mt-8 border-b border-gray w-4/6 lg:w-2/4 border-opacity-30 md:border-none ">
                 {mounted && isMobile ? (
