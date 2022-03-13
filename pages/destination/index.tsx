@@ -24,12 +24,12 @@ const Destination = () => {
           <Header />
         </div>
 
-        <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-center mt-4 mx-1">
+        <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-center mt-4 mx-1 min-h-screen">
           <h1 className="uppercase my-6 lg:my-20 lg:mx-20 text-base lg:text-2xl text-white tracking-widest">
             <span className="opacity-25 pr-4 font-bold">01</span> Pick your
             destination
           </h1>
-          <div className="flex flex-col lg:flex-row w-full">
+          <div className="flex flex-col justify-start lg:flex-row w-full min-h-screen">
             <div className="flex justify-start items-center text-center w-full lg:basis-6/12 xl:basis-8/12">
               <div className="flex flex-col justify-start items-center text-center w-full">
                 <div className="flex flex-col justify-between items-center mt-2 w-5/6 lg:w-full">

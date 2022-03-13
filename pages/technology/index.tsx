@@ -24,6 +24,7 @@ const Technology = () => {
     setMounted(true);
   }, []);
 
+  console.log(activeButton);
   const isMobile = width && width < 768;
 
   return (
@@ -36,16 +37,16 @@ const Technology = () => {
           <Header />
         </div>
 
-        <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-left mt-4 mx-1">
+        <div className="flex flex-col justify-start md:items-start md:ml-9 items-center text-center lg:text-left mt-4 mx-1">
           <h1 className="uppercase my-6 lg:my-20 lg:mx-20 text-base lg:text-2xl text-white tracking-widest">
             <span className="opacity-25 pr-4 font-bold">03</span> Space launch
             101
           </h1>
         </div>
 
-        <div className="flex flex-row-reverse items-center mb-20">
-          <div className="mt-3 lg:mt-0 w-full relative flex items-center">
-            <div className="w-full max-w-[500px] right-0 absolute">
+        <div className="flex flex-col lg:flex-row-reverse items-center mb-20">
+          <div className="mt-3 lg:mt-0 w-full block lg:relative flex items-center">
+            <div className="w-full lg:max-w-[500px] block lg:right-0 lg:absolute">
               {activeButton === 0 && (
                 <Image
                   src={mounted && !isMobile ? VEHICLE_PORTRAIT : VEHICLE}
@@ -60,7 +61,7 @@ const Technology = () => {
                   src={mounted && !isMobile ? SPACEPORT_PORTRAIT : SPACEPORT}
                   className="fade-in"
                   alt="Picture of Spaceport"
-                  layout="fixed"
+                  layout="responsive"
                   priority
                 />
               )}
@@ -85,7 +86,7 @@ const Technology = () => {
             />
           </div>
 
-          <div className="flex flex-col justify-between items-start mt-14 md:mb-8 lg:mt-14 !text-left">
+          <div className="flex flex-col justify-between items-center lg:items-start mt-14 md:mb-8 lg:mt-14 lg:!text-left">
             <h2 className="uppercase text-base text-blue lg:text-2xl font-bellefair mb-2 text-left">
               The Terminology...
             </h2>
