@@ -88,7 +88,7 @@ const Technology = () => {
             />
           </div>
 
-          <div className="flex flex-col justify-between items-center lg:items-start mt-14 md:mb-8 lg:mt-14 lg:!text-left">
+          <div className="flex flex-col justify-between items-center lg:items-start mt-14 md:mb-8 lg:mt-20 lg:!text-left">
             <h2 className="uppercase text-base text-blue lg:text-2xl font-bellefair mb-2 text-left">
               The Terminology...
             </h2>
