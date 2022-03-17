@@ -43,7 +43,7 @@ const Technology = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col lg:flex-row-reverse items-center mb-20 md:ml-9">
+        <div className="flex flex-col lg:flex-row-reverse items-center mb-20 lg:ml-9">
           <div className="mt-3 lg:mt-0 w-full block lg:relative flex items-center">
             <div className="w-full lg:max-w-[500px] block lg:right-0 lg:absolute lg:mt-14">
               {activeButton === 0 && (
