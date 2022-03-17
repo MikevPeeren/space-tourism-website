@@ -42,12 +42,12 @@ const Header = () => {
               <div className="flex items-center">
                 <div className="hidden lg:block absolute xl:-left-96 lg:-left-72 flex justify-center text-center items-center z-10 h-px lg:w-2/4 xl:w-4/6 bg-white opacity-25"></div>
                 <nav className="navBackground flex top-0">
-                  <ul className="flex justify-between items-end flex-row w-full px-10">
+                  <ul className="flex justify-between items-end lg:items-center flex-row w-full px-10">
                     <li
-                      className={`uppercase px-4 mt-6 ${
+                      className={`uppercase px-4 mt-6 lg:mt-0 ${
                         router.pathname === "/"
-                          ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
-                          : "pb-9"
+                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-8 after:w-full after:content[''] after:block"
+                          : "pb-9 lg:pb-0"
                       }`}
                     >
                       <Link href="/" passHref>
@@ -60,10 +60,10 @@ const Header = () => {
                       </Link>
                     </li>
                     <li
-                      className={`uppercase px-4 mt-6 ${
+                      className={`uppercase px-4 mt-6 lg:mt-0 ${
                         router.pathname === "/destination"
-                          ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
-                          : "pb-9"
+                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-8 after:w-full after:content[''] after:block"
+                          : "pb-9 lg:pb-0"
                       }`}
                     >
                       <Link href="/destination" passHref>
@@ -76,10 +76,10 @@ const Header = () => {
                       </Link>
                     </li>
                     <li
-                      className={`uppercase px-4 mt-6 ${
+                      className={`uppercase px-4 mt-6 lg:mt-0 ${
                         router.pathname === "/crew"
-                          ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
-                          : "pb-9"
+                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-8 after:w-full after:content[''] after:block"
+                          : "pb-9 lg:pb-0"
                       }`}
                     >
                       <Link href="/crew" passHref>
@@ -92,10 +92,10 @@ const Header = () => {
                       </Link>
                     </li>
                     <li
-                      className={`uppercase px-4 mt-6 ${
+                      className={`uppercase px-4 mt-6 lg:mt-0 ${
                         router.pathname === "/technology"
-                          ? "after:border-b-4 after:border-white after:pt-8 after:w-full after:content[''] after:block"
-                          : "pb-9"
+                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-8 after:w-full after:content[''] after:block"
+                          : "pb-9 lg:pb-0"
                       }`}
                     >
                       <Link href="/technology" passHref>
