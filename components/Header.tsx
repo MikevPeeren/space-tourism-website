@@ -46,8 +46,8 @@ const Header = () => {
                     <li
                       className={`uppercase px-4 mt-6 lg:mt-0 ${
                         router.pathname === "/"
-                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-8 after:w-full after:content[''] after:block"
-                          : "pb-9 lg:pb-0"
+                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-7 after:w-full after:content[''] after:block"
+                          : "pb-9 lg:pb-0 hover:after:border-b-4 hover:after:border-gray hover:lg:pt-8 hover:after:pb-7 hover:after:w-full hover:after:content[''] hover:after:block"
                       }`}
                     >
                       <Link href="/" passHref>
@@ -62,8 +62,8 @@ const Header = () => {
                     <li
                       className={`uppercase px-4 mt-6 lg:mt-0 ${
                         router.pathname === "/destination"
-                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-8 after:w-full after:content[''] after:block"
-                          : "pb-9 lg:pb-0"
+                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-7 after:w-full after:content[''] after:block"
+                          : "pb-9 lg:pb-0 hover:after:border-b-4 hover:after:border-gray hover:lg:pt-8 hover:after:pb-7 hover:after:w-full hover:after:content[''] hover:after:block"
                       }`}
                     >
                       <Link href="/destination" passHref>
@@ -78,8 +78,8 @@ const Header = () => {
                     <li
                       className={`uppercase px-4 mt-6 lg:mt-0 ${
                         router.pathname === "/crew"
-                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-8 after:w-full after:content[''] after:block"
-                          : "pb-9 lg:pb-0"
+                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-7 after:w-full after:content[''] after:block"
+                          : "pb-9 lg:pb-0 hover:after:border-b-4 hover:after:border-gray hover:lg:pt-8 hover:after:pb-7 hover:after:w-full hover:after:content[''] hover:after:block"
                       }`}
                     >
                       <Link href="/crew" passHref>
@@ -94,8 +94,8 @@ const Header = () => {
                     <li
                       className={`uppercase px-4 mt-6 lg:mt-0 ${
                         router.pathname === "/technology"
-                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-8 after:w-full after:content[''] after:block"
-                          : "pb-9 lg:pb-0"
+                          ? "after:border-b-4 after:border-white lg:pt-8 after:pb-7 after:w-full after:content[''] after:block"
+                          : "pb-9 lg:pb-0 hover:after:border-b-4 hover:after:border-gray hover:lg:pt-8 hover:after:pb-7 hover:after:w-full hover:after:content[''] hover:after:block"
                       }`}
                     >
                       <Link href="/technology" passHref>
