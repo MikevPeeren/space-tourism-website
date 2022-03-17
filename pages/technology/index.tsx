@@ -43,7 +43,7 @@ const Technology = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col lg:flex-row-reverse items-center mb-20">
+        <div className="flex flex-col lg:flex-row-reverse items-center mb-20 md:ml-9">
           <div className="mt-3 lg:mt-0 w-full block lg:relative flex items-center">
             <div className="w-full lg:max-w-[500px] block lg:right-0 lg:absolute lg:mt-14">
               {activeButton === 0 && (
@@ -107,11 +107,11 @@ const Technology = () => {
                 : `A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.`}
             </h4>
           </div>
-          <div className="mt-10 lg:mt-0 hidden lg:block">
+          <div className="mt-10 lg:mt-0 hidden lg:block lg:mx-20">
             <ListSelector
               activeButton={activeButton}
               page="technology desktop"
-              extraClassNames="flex flex-col justify-around mx-10 mt-0"
+              extraClassNames="flex flex-col justify-around mx-10 lg:mx-0 mt-0"
               setActiveButton={setActiveButton}
               content={[1, 2, 3]}
               variant="md"
