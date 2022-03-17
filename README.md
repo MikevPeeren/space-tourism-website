@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](--)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/flexbox-tailwindcss-nextjs-space-tourism-website-Fo9CtPjTl)
 - Live Site URL: [Space Tourism Website](https://space-tourism-website-one.vercel.app/)
 
 ## My process
