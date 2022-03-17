@@ -41,7 +41,7 @@ const Header = () => {
             <div className="relative">
               <div className="flex items-center">
                 <div className="hidden lg:block absolute xl:-left-96 lg:-left-72 flex justify-center text-center items-center z-10 h-px lg:w-2/4 xl:w-4/6 bg-white opacity-25"></div>
-                <nav className="navBackground flex top-0">
+                <nav className="navBackground flex top-0 z-40">
                   <ul className="flex justify-between items-end lg:items-center flex-row w-full px-10">
                     <li
                       className={`uppercase px-4 mt-6 lg:mt-0 ${

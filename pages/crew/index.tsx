@@ -81,7 +81,7 @@ const Crew = () => {
                     )}
                   </div>
                 ) : (
-                  <div className="w-3/4 md:w-4/12 lg:w-4/12 lg:absolute bottom-0 lg:right-10">
+                  <div className="w-3/4 md:w-3/4 lg:w-4/12 lg:absolute bottom-0 lg:right-10">
                     {activeButton === 0 && (
                       <Image
                         src={DOUGLAS}
